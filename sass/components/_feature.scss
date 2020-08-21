@@ -1,0 +1,35 @@
+.feature-list {
+  display: flex;
+
+  .title {
+    margin-bottom: 10px;
+
+    color: $title-text-color;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .item {
+    width: calc((100% - 90px) / 3);
+  }
+
+  .item + .item {
+    margin-left: 30px;
+  }
+
+  .text {
+    line-height: 1.71;
+  }
+}
+
+.feature-container {
+  @include centeredFlex();
+
+  width: 270px;
+  height: 120px;
+
+  margin-bottom: 30px;
+
+  background: #f5f4fa;
+  border-radius: 4px;
+}

@@ -1,0 +1,47 @@
+.site-nav {
+  display: flex;
+  margin-left: 85px;
+
+  .item + .item {
+    /* беруться все кроме первого */
+    margin-left: 50px;
+
+    /*результат тотже что и выше
+    только берутся все кроме последнего
+    .site-nav .item:not(:last-child) {
+    margin-right: 50px;
+    } */
+  }
+}
+
+.site-nav-link {
+  /*чтобы работала вертикальная геометрия и раздвигалась li */
+  display: block;
+  /* увеличиваем высоту линка, ширина по которой можно пецнуть мышкой */
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: $title-text-color;
+
+  font-weight: 500;
+  letter-spacing: 0.02em;
+
+  text-decoration: none;
+  transition: color $time-animation $time-function;
+
+  &:hover,
+  &:focus,
+  &.current {
+    color: $accent-color;
+  }
+
+  &.current::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: $accent-color;
+    border-radius: 2px;
+    transform: translateY(32px);
+  }
+}
