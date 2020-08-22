@@ -87,6 +87,9 @@ textarea {
   height: 40px;
   padding: 12px 42px;
 
+  color: black;
+  transition: color $time-animation $time-function;
+
   &:focus + .img-form {
     color: $accent-color;
   }
@@ -116,6 +119,7 @@ textarea {
   @include centeredFlex();
 
   color: black;
+  transition: color $time-animation $time-function;
 
   &:hover,
   &:focus {

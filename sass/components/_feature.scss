@@ -1,5 +1,5 @@
 .feature-list {
-  display: flex;
+  // display: flex;
 
   .title {
     margin-bottom: 10px;
@@ -10,26 +10,43 @@
   }
 
   .item {
-    width: calc((100% - 90px) / 3);
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 90px) / 3);
+    }
   }
 
-  .item + .item {
-    margin-left: 30px;
+  @media screen and (min-width: $desktop) {
+    .item + .item {
+      margin-left: 30px;
+    }
   }
 
   .text {
     line-height: 1.71;
   }
+
+  //   @media screen and (min-width: $tablet) {
+  //   max-width: $tablet;
+  // }
+
+  // @media screen and (min-width: $desktop) {
+  //   max-width: 1600px;
+  //   min-width: 1200px;
+  //   height: 600px;
+  // }
 }
 
 .feature-container {
   @include centeredFlex();
 
-  width: 270px;
-  height: 120px;
-
-  margin-bottom: 30px;
-
   background: #f5f4fa;
   border-radius: 4px;
+
+  width: 450px;
+  height: 120px;
+
+  @media screen and (min-width: $desktop) {
+    width: 270px;
+    margin-bottom: 30px;
+  }
 }

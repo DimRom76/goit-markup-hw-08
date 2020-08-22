@@ -43,20 +43,37 @@ p {
 
 .container {
   @extend %centeredMargin;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
+
+  padding: 16px 15px;
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
+}
+
+.navigation {
+  display: none;
 }
 
 .main-nav {
-  display: flex;
-  align-items: center;
   border-bottom: 1px solid #ececec;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .button {
   display: inline-block;
-  min-width: 200px;
+  max-width: 200px;
   padding: 10px 32px;
   border-radius: 4px;
 
