@@ -20,7 +20,14 @@
 .modal {
   position: absolute;
 
-  width: 528px;
+  width: 450px;
+  height: 609px;
+
+  @media screen and (min-width: $desktop) {
+    width: 528px;
+    height: 581px;
+  }
+
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -70,10 +77,6 @@ textarea {
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
-
-  &:hover * {
-    cursor: url(../images/finger.svg), pointer;
-  }
 }
 
 .form-label {
@@ -171,6 +174,13 @@ textarea {
 
 .checkbox-label {
   display: inline-block;
+
+  font-size: 12px;
+  line-height: 1.16;
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 
   &::before {
     content: '';

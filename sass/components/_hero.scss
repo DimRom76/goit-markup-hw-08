@@ -2,7 +2,7 @@
   @include centeredFlex();
   @extend %centeredMargin;
 
-  max-width: 480px;
+  max-width: $mobile;
   height: 400px;
 
   @media screen and (min-width: $tablet) {
@@ -10,8 +10,8 @@
   }
 
   @media screen and (min-width: $desktop) {
-    max-width: 1600px;
-    min-width: 1200px;
+    max-width: $desktopMax;
+    min-width: $desktop;
     height: 600px;
   }
 
@@ -42,12 +42,6 @@
   font-weight: 900;
   font-size: 26px;
   line-height: 1.61;
-
-  @media screen and (min-width: $tablet) {
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-  }
 
   @media screen and (min-width: $desktop) {
     font-weight: 900;

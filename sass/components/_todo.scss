@@ -1,3 +1,9 @@
+@media screen and (max-width: $desktop1) {
+  .todo-section {
+    display: none;
+  }
+}
+
 .todo-list {
   @include centeredFlex(space-between);
 }
