@@ -74,11 +74,30 @@
     color: $primary-white-color;
   }
 
+  @media screen and (min-width: $tablet) and (max-width: $desktop1) {
+    form {
+      margin-top: 60px;
+      width: 450px;
+    }
+  }
+
   &.container {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
     @media screen and (min-width: $desktop) {
       display: flex;
       justify-content: space-between;
     }
+  }
+}
+
+.footer-list {
+  @media screen and (min-width: $tablet) and (max-width: $desktop1) {
+    margin-left: 165px;
   }
 }
 

@@ -6,6 +6,10 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+
+  &.modal-open {
+    overflow: hidden;
+  }
 }
 
 button {
@@ -60,19 +64,16 @@ p {
   }
 }
 
-.navigation {
-  display: none;
-}
-
 .main-nav {
+  position: relative;
+
   border-bottom: 1px solid #ececec;
   padding-top: 16px;
-  padding-bottom: 16px;
-
-  @media screen and (min-width: $tablet) {
-    display: flex;
-    align-items: center;
+  @media screen and (max-width: $tablet1) {
+    padding-bottom: 16px;
   }
+
+  @include centeredFlex(space-between);
 }
 
 .button {

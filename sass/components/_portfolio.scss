@@ -1,7 +1,16 @@
 .filter {
-  margin-top: 84px;
-  margin-bottom: 34px;
-  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-top: 94px;
+    margin-bottom: 50px;
+  }
 }
 
 .button-work {
@@ -22,6 +31,12 @@
     background-color $time-animation $time-function,
     box-shadow $time-animation $time-function;
 
+  @media screen and (max-width: $tablet1) {
+    &:first-child {
+      margin-bottom: 15px;
+    }
+  }
+
   &:not(:last-child) {
     margin-right: 8px;
   }
@@ -38,7 +53,7 @@
 .work-list {
   display: flex;
   flex-wrap: wrap;
-  margin: -15px;
+  // margin: -15px;
 
   .element {
     background-color: $primary-white-color;
@@ -50,18 +65,46 @@
 
     /* вариант 1 дать маржины половинчатые везде и у контейнера их сминусовать */
     /* работает если нет фона */
-    width: 370px;
-    margin: 15px;
+    // width: 370px;
+    // margin: 15px;
 
     /* вариант 2 рассчитать динамически и подправить у крайних маржины */
     /* рассчет ширины относительно всего экрана 
   2 - колво элементов с маржинами
   30 - ширина маржина
   3 - количество элементов на строке*/
-    /* width: calc((100% - 2 * 30px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px; */
 
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - 30px) / 2);
+      margin-right: 30px;
+      margin-bottom: 30px;
+
+      /* каждый третий уберем маржин справа */
+      &:nth-child(2n) {
+        margin-right: 0px;
+      }
+
+      /* последние три уберем маржин снизу */
+      &:nth-last-child(-n + 2) {
+        margin-bottom: 0px;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 2 * 30px) / 3);
+      margin-right: 30px;
+      margin-bottom: 30px;
+
+      /* каждый третий уберем маржин справа */
+      &:nth-child(3n) {
+        margin-right: 0px;
+      }
+
+      /* последние три уберем маржин снизу */
+      &:nth-last-child(-n + 3) {
+        margin-bottom: 0px;
+      }
+    }
     &:hover {
       box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16),
         0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
@@ -71,16 +114,6 @@
       transform: translateY(0);
     }
   }
-
-  /* каждый третий уберем маржин справа */
-  /* .work-list .element:nth-child(3n) {
-  margin-right: 0px;
-} */
-
-  /* последние три уберем маржин снизу */
-  /* .work-list .element:nth-last-child(-n + 3) {
-  margin-bottom: 0px;
-} */
 
   .title {
     margin-bottom: 4px;

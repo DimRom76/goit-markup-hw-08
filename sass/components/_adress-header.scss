@@ -5,10 +5,18 @@
 }
 
 .adress-nav {
-  display: flex;
+  @media screen and (min-width: $tablet) and (max-width: $desktop1) {
+    & .item + .item {
+      margin-top: 10px;
+    }
+  }
 
-  & .item + .item {
-    margin-left: 30px;
+  @media screen and (min-width: $desktop) {
+    display: flex;
+
+    & .item + .item {
+      margin-left: 30px;
+    }
   }
 }
 
