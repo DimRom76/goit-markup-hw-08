@@ -19,44 +19,65 @@
     <header>
       <div class="container main-nav">
         <a href="./index.html" class="logo">
-          <span class="logo-web">Web</span>
-          <span class="logo-studio">Studio</span>
+          <span class="logo-web">Web</span
+          ><span class="logo-studio">Studio</span>
         </a>
 
-        <nav>
-          <ul class="site-nav list">
-            <li class="item">
-              <a href="./index.html" class="site-nav-link">Студия</a>
-            </li>
-            <li class="item">
-              <a href="./portfolio.html" class="site-nav-link current"
-                >Портфолио</a
-              >
-            </li>
-            <li class="item"><a href="" class="site-nav-link">Контакты</a></li>
-          </ul>
-        </nav>
+        <div class="container-nav" data-menu id="menu-container">
+          <nav>
+            <ul class="site-nav list">
+              <li class="item">
+                <a href="./index.html" class="site-nav-link">Студия</a>
+              </li>
+              <li class="item">
+                <a href="./portfolio.html" class="site-nav-link current"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="item">
+                <a href="" class="site-nav-link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
 
-        <address class="adress">
-          <ul class="adress-nav list">
-            <li class="item">
-              <a href="mailto:info@devstudio.com" class="adress-link">
-                <svg class="icon-header" width="16" height="12">
-                  <use href="./images/symbol-defs.svg#envelope"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="item">
-              <a href="tel:+380961111111" class="adress-link">
-                <svg class="icon-header" width="10" height="15">
-                  <use href="./images/symbol-defs.svg#phone"></use>
-                </svg>
-                +38 096 111 11 11
-              </a>
-            </li>
-          </ul>
-        </address>
+          <address class="adress">
+            <ul class="adress-nav list">
+              <li class="item">
+                <a href="mailto:info@devstudio.com" class="adress-link">
+                  <svg class="icon-header" width="16" height="12">
+                    <use href="./images/symbol-defs.svg#envelope"></use>
+                  </svg>
+                  info@devstudio.com</a
+                >
+              </li>
+              <li class="item">
+                <a href="tel:+380961111111" class="adress-link">
+                  <svg class="icon-header" width="10" height="15">
+                    <use href="./images/symbol-defs.svg#phone"></use>
+                  </svg>
+                  +38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+          </address>
+        </div>
+
+        <button
+          type="button"
+          class="button-menu"
+          data-menu-button
+          aria-expanded="false"
+          aria-controls="menu-container"
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use class="icon-cross" href="./images/symbol-defs.svg#cross"></use>
+            <use class="icon-menu" href="./images/symbol-defs.svg#menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -78,7 +99,7 @@
                   <img
                     src="./images/Portfolio/img1.jpg"
                     alt="работа 1"
-                    width="370"
+                    width="100%"
                   />
                   <p class="item">
                     Технокряк это современная площадка распространения
@@ -98,7 +119,7 @@
                   <img
                     src="./images/Portfolio/img2.jpg"
                     alt="работа 2"
-                    width="370"
+                    width="100%"
                   />
                   <p class="item">
                     Технокряк это современная площадка распространения
@@ -118,7 +139,7 @@
                   <img
                     src="./images/Portfolio/img3.jpg"
                     alt="работа 3"
-                    width="370"
+                    width="100%"
                   />
                   <p class="item">
                     Технокряк это современная площадка распространения
@@ -138,7 +159,7 @@
                   <img
                     src="./images/Portfolio/img4.jpg"
                     alt="работа 4"
-                    width="370"
+                    width="100%"
                   />
                   <p class="item">
                     Технокряк это современная площадка распространения
@@ -158,7 +179,7 @@
                   <img
                     src="./images/Portfolio/img5.jpg"
                     alt="работа 5"
-                    width="370"
+                    width="100%"
                   />
                   <p class="item">
                     Технокряк это современная площадка распространения
@@ -178,7 +199,7 @@
                   <img
                     src="./images/Portfolio/img6.jpg"
                     alt="работа 6"
-                    width="370"
+                    width="100%"
                   />
                   <p class="item">
                     Технокряк это современная площадка распространения
@@ -198,7 +219,7 @@
                   <img
                     src="./images/Portfolio/img7.jpg"
                     alt="работа 7"
-                    width="370"
+                    width="100%"
                   />
                   <p class="item">
                     Технокряк это современная площадка распространения
@@ -218,7 +239,7 @@
                   <img
                     src="./images/Portfolio/img8.jpg"
                     alt="работа 8"
-                    width="370"
+                    width="100%"
                   />
                   <p class="item">
                     Технокряк это современная площадка распространения
@@ -238,7 +259,7 @@
                   <img
                     src="./images/Portfolio/img9.jpg"
                     alt="работа 9"
-                    width="370"
+                    width="100%"
                   />
                   <p class="item">
                     Технокряк это современная площадка распространения
@@ -261,8 +282,8 @@
       <div class="container footer">
         <div>
           <a href="./index.html" class="logo">
-            <span class="logo-web">Web</span>
-            <span class="logo-studio">Studio</span>
+            <span class="logo-web">Web</span
+            ><span class="logo-studio">Studio</span>
           </a>
           <address class="footer-adress">
             <ul class="list">
@@ -350,5 +371,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

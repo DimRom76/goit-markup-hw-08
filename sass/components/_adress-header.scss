@@ -5,6 +5,15 @@
 }
 
 .adress-nav {
+  @media screen and (max-width: $tablet1) {
+    font-size: 18px;
+    line-height: 1.16;
+
+    & .item + .item {
+      margin-top: 16px;
+    }
+  }
+
   @media screen and (min-width: $tablet) and (max-width: $desktop1) {
     & .item + .item {
       margin-top: 10px;

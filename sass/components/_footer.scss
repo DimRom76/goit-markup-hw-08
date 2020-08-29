@@ -17,6 +17,8 @@
 
     max-width: $desktopMax;
     min-width: $desktop;
+
+    text-align: left;
   }
 
   background: #2f303a;
@@ -66,7 +68,7 @@
 
 .footer {
   .logo {
-    display: block;
+    display: inline-block;
     margin-bottom: 20px;
   }
 
