@@ -73,26 +73,25 @@
   30 - ширина маржина
   3 - количество элементов на строке*/
 
-    @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+    /* последний уберем маржин снизу */
+    &:last-child() {
+      margin-bottom: 0px;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $desktop1) {
       width: calc((100% - 30px) / 2);
       margin-right: 30px;
-      margin-bottom: 30px;
 
-      /* каждый третий уберем маржин справа */
+      /* каждый второ1 уберем маржин справа */
       &:nth-child(2n) {
         margin-right: 0px;
-      }
-
-      /* последние три уберем маржин снизу */
-      &:nth-last-child(-n + 2) {
-        margin-bottom: 0px;
       }
     }
 
     @media screen and (min-width: $desktop) {
       width: calc((100% - 2 * 30px) / 3);
       margin-right: 30px;
-      margin-bottom: 30px;
 
       /* каждый третий уберем маржин справа */
       &:nth-child(3n) {
@@ -145,7 +144,6 @@
   }
 
   .text {
-    margin-bottom: 20px;
     font-size: 16px;
     line-height: 1.87;
     color: $primary-text-color;
@@ -164,4 +162,17 @@
 .work-list-img {
   position: relative;
   overflow: hidden;
+
+  img {
+    height: 294px;
+
+    @media screen and (min-width: $tablet) {
+      width: 354px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: 370px;
+    }
+    object-fit: cover;
+  }
 }

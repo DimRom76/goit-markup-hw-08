@@ -19,11 +19,70 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url('../images/Header.jpg');
+    url('../images/Header/HeaderMobile.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgba(47, 48, 58, 0.4);
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/Header/HeaderMobile@2x.jpg');
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .overlay {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/Header/HeaderTablet.jpg');
+  }
+}
+
+@media screen and (min-width: $tablet) and (min-device-pixel-ratio: 2),
+  screen and (min-width: $tablet) and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-width: $tablet) and (min-resolution: 192dpi),
+  screen and (min-width: $tablet) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/Header/HeaderTablet@2x.jpg');
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .overlay {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/Header/HeaderDesktop.jpg');
+  }
+}
+
+@media screen and (min-width: $desktop) and (min-device-pixel-ratio: 2),
+  screen and (min-width: $desktop) and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-width: $desktop) and (min-resolution: 192dpi),
+  screen and (min-width: $desktop) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('../images/Header/HeaderDesktop@2x.jpg');
+  }
 }
 
 .hero {

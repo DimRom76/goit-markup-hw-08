@@ -155,8 +155,12 @@
             <li class="todo-item">
               <div class="todo-container">
                 <img
+                  srcset="
+                    ./images/Studia/laptop.jpg    1x,
+                    ./images/Studia/laptop@2x.jpg 2x
+                  "
                   class="icon"
-                  src="./images/laptop.jpg"
+                  src="./images/Studia/laptop.jpg"
                   alt="laptop"
                   width="370"
                   height="294"
@@ -167,8 +171,12 @@
             <li class="todo-item">
               <div class="todo-container">
                 <img
+                  srcset="
+                    ./images/Studia/smartphone.jpg    1x,
+                    ./images/Studia/smartphone@2x.jpg 2x
+                  "
                   class="icon"
-                  src="./images/smartphone.jpg"
+                  src="./images/Studia/smartphone.jpg"
                   alt="smartphone"
                   width="370"
                   height="294"
@@ -179,8 +187,12 @@
             <li class="todo-item">
               <div class="todo-container">
                 <img
+                  srcset="
+                    ./images/Studia/monitor.jpg    1x,
+                    ./images/Studia/monitor@2x.jpg 2x
+                  "
                   class="icon"
-                  src="./images/monitor.jpg"
+                  src="./images/Studia/monitor.jpg"
                   alt="monitor"
                   width="370"
                   height="294"
@@ -197,12 +209,35 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team-list list">
             <li class="team-item">
-              <img
-                src="./images/team1.jpg"
-                alt="член команды 1"
-                width="100%"
-                class="img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/Team/team1Mobile.jpg    1x,
+                    ./images/Team/team1Mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/Team/team1Desktop.jpg    1x,
+                    ./images/Team/team1Desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/Team/team1Tablet.jpg    1x,
+                    ./images/Team/team1Tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="./images/team1Tablet.jpg"
+                  alt="член команды 1"
+                  class="img"
+                  width="100%"
+                />
+              </picture>
               <h3 class="title">Игорь Демьяненко</h3>
               <p class="text">Product Designer</p>
               <ul class="social-list list">
@@ -241,12 +276,35 @@
               </ul>
             </li>
             <li class="team-item">
-              <img
-                src="./images/team2.jpg"
-                alt="член команды 2"
-                width="270"
-                class="img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/Team/team2Mobile.jpg 1x
+                    ./images/Team/team2Mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/Team/team2Desktop.jpg 1x
+                    ./images/Team/team2Desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/Team/team2Tablet.jpg    1x,
+                    ./images/Team/team2Tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="./images/team2Tablet.jpg"
+                  alt="член команды 2"
+                  class="img"
+                  width="100%"
+                />
+              </picture>
               <h3 class="title">Ольга Репина</h3>
               <p class="text">Frontend Developer</p>
               <ul class="social-list list">
@@ -285,12 +343,35 @@
               </ul>
             </li>
             <li class="team-item">
-              <img
-                src="./images/team3.jpg"
-                alt="член команды 3"
-                width="270"
-                class="img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/Team/team3Mobile.jpg    1x,
+                    ./images/Team/team3Mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/Team/team3Desktop.jpg    1x,
+                    ./images/Team/team3Desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/Team/team3Tablet.jpg    1x,
+                    ./images/Team/team3Tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="./images/team3Tablet.jpg"
+                  alt="член команды 3"
+                  class="img"
+                  width="100%"
+                />
+              </picture>
               <h3 class="title">Николай Тарасов</h3>
               <p class="text">Marketing</p>
               <ul class="social-list list">
@@ -329,12 +410,35 @@
               </ul>
             </li>
             <li class="team-item">
-              <img
-                src="./images/team4.jpg"
-                alt="член команды 4"
-                width="270"
-                class="img"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/Team/team4Mobile.jpg    1x,
+                    ./images/Team/team4Mobile@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <source
+                  srcset="
+                    ./images/Team/team4Desktop.jpg    1x,
+                    ./images/Team/team4Desktop@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/Team/team4Tablet.jpg    1x,
+                    ./images/Team/team4Tablet@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="./images/team4Tablet.jpg"
+                  alt="член команды 4"
+                  class="img"
+                  width="100%"
+                />
+              </picture>
               <h3 class="title">Михаил Ермаков</h3>
               <p class="text">UI Designer</p>
               <ul class="social-list list">

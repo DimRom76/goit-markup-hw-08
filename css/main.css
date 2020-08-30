@@ -421,8 +421,8 @@ p {
           justify-content: center;
   max-width: 480px;
   height: 400px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Header.jpg");
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Header.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Header/HeaderMobile.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Header/HeaderMobile.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -440,6 +440,41 @@ p {
     max-width: 1600px;
     min-width: 1200px;
     height: 600px;
+  }
+}
+
+@media screen and (min-device-pixel-ratio: 2), screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 192dpi), screen and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Header/HeaderMobile@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Header/HeaderMobile@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .overlay {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Header/HeaderTablet.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Header/HeaderTablet.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Header/HeaderTablet@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Header/HeaderTablet@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .overlay {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Header/HeaderDesktop.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Header/HeaderDesktop.jpg");
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .overlay {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/Header/HeaderDesktop@2x.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Header/HeaderDesktop@2x.jpg");
   }
 }
 
@@ -1000,21 +1035,22 @@ p {
   2 - колво элементов с маржинами
   30 - ширина маржина
   3 - количество элементов на строке*/
+  margin-bottom: 30px;
+  /* последний уберем маржин снизу */
 }
 
-@media screen and (min-width: 768px) {
+.work-list .element:last-child {
+  margin-bottom: 0px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .work-list .element {
     width: calc((100% - 30px) / 2);
     margin-right: 30px;
-    margin-bottom: 30px;
-    /* каждый третий уберем маржин справа */
-    /* последние три уберем маржин снизу */
+    /* каждый второ1 уберем маржин справа */
   }
   .work-list .element:nth-child(2n) {
     margin-right: 0px;
-  }
-  .work-list .element:nth-last-child(-n + 2) {
-    margin-bottom: 0px;
   }
 }
 
@@ -1022,7 +1058,6 @@ p {
   .work-list .element {
     width: calc((100% - 2 * 30px) / 3);
     margin-right: 30px;
-    margin-bottom: 30px;
     /* каждый третий уберем маржин справа */
     /* последние три уберем маржин снизу */
   }
@@ -1073,7 +1108,6 @@ p {
 }
 
 .work-list .text {
-  margin-bottom: 20px;
   font-size: 16px;
   line-height: 1.87;
   color: #757575;
@@ -1091,6 +1125,24 @@ p {
 .work-list-img {
   position: relative;
   overflow: hidden;
+}
+
+.work-list-img img {
+  height: 294px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+  .work-list-img img {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .work-list-img img {
+    width: 370px;
+  }
 }
 
 .backdrope {
